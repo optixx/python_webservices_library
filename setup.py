@@ -24,5 +24,5 @@ setup(name = 'sugarcrm',
                    "Topic :: Office/Business"],
       keywords="Customer Relationship Management SugarCRM CRM",
       packages=PACKAGES,
-      install_requires=['urllib','json','hashlib','sys']
+      install_requires=[]
 )
