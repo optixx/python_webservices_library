@@ -25,5 +25,4 @@ setup(name = 'sugarcrm',
       keywords="Customer Relationship Management SugarCRM CRM",
       packages=PACKAGES,
       install_requires=[]
-      install_requires=['urllib','json','hashlib','sys','unittest','HTMLParser']
 )

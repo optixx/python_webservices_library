@@ -18,7 +18,7 @@ class Sugarcrm:
     This class is what is used to connect to and interact with the SugarCRM
     server.
     """
-    
+
     def __init__(self, url, username, password):
         """Constructor for Sugarcrm connection.
 
@@ -76,11 +76,12 @@ class Sugarcrm:
         rst_modules = self.get_available_modules()
         for module_name in [module['module_key'] for
                                             module in rst_modules['modules']]:
-            try:
-                module = SugarModule(self, module_name)
-                self.modules[module_name] = module
-            except:
-                pass
+            if module_name in  ["Users","Contacts","Accounts","Cases"]:
+                try:
+                    module = SugarModule(self, module_name)
+                    self.modules[module_name] = module
+                except:
+                    pass
 
 
     def _sendRequest(self, method, data):
